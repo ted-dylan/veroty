@@ -51,7 +51,7 @@ const products = [
   {
     name: "골프타석의자 · Golf Pod",
     type: "이동가구 · 독자개발",
-    img: "",
+    img: "/images/products/golf-pod-basic-banner.webp",
     alt: "베로티 골프타석의자 Golf Pod Basic Trendy 커뮤니티 골프연습장",
     desc: "품격 있는 골프연습과 공간의 美를 위한 1인용 타석의자. Basic·Trendy 두 가지 타입.",
     patent: "출원번호 30-2025-0031589",
@@ -109,14 +109,14 @@ export default function ProductsPage() {
           {products.map((p) => (
             <Link key={p.name} href={p.href}>
               <div className="group border border-neutral-100 hover:border-neutral-300 transition-colors cursor-pointer">
-                <div className="aspect-[4/3] overflow-hidden bg-neutral-100">
+                <div className="aspect-[16/9] overflow-hidden bg-neutral-50">
                   {p.img ? (
                     <img
                       src={p.img}
                       alt={p.alt}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                       loading="lazy"
-                      width={600}
+                      width={800}
                       height={450}
                     />
                   ) : (

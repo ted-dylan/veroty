@@ -25,19 +25,20 @@ function CountUp({ value, suffix = "" }: { value: number; suffix?: string }) {
 const categories = ["전체", "이동가구", "제작가구", "타일·석재", "디스플레이", "독자개발상품"]
 
 const stats = [
-  { v: 10,  s: "+", l: "납품 현장" },
   { v: 80,  s: "년", l: "중국경력 합계" },
-  { v: 4,   s: "개", l: "중국 거점 항구" },
-  { v: 30,  s: "%↓", l: "가격경쟁력" },
+  { v: 60,  s: "개", l: "협력공장" },
+  { v: 3,   s: "개", l: "MOU 생산공장" },
+  { v: 30,  s: "%", l: "가격경쟁력" },
 ]
 
-const featured = [
+// VALEN 시리즈
+const valenSeries = [
   {
     name: "협탁 · VALEN SIDE TABLE",
     type: "디자인등록 30-1305034호",
     year: "2024",
     location: "LPM 라운드 공법",
-    img: "/images/products/side-table-11.webp",
+    img: "/images/products/side-table-banner.webp",
     alt: "베로티 협탁 VALEN SIDE TABLE LPM 라운딩 공법 디자인등록 상품 인테리어 연출",
     desc: "각진 모서리 없는 동글동글 디자인. 고가 공법을 LPM 소재로 합리적으로 구현한 Value Engineering 성공사례",
     href: "/products/side-table/",
@@ -47,30 +48,64 @@ const featured = [
     type: "디자인등록 30-1305033호",
     year: "2024",
     location: "LPM 래핑 공법",
-    img: "/images/products/bookshelf-01.webp",
+    img: "/images/products/bookshelf-banner.webp",
     alt: "베로티 책장 MY BOOKSHELF LPM 래핑 공법 Knock Down 디자인등록 상품",
     desc: "볼트 하나로 완성되는 Knock Down 방식. 필요한 공간에 필요한 사이즈로 어디든 설치 가능한 유닛형 책장",
     href: "/products/bookshelf/",
+  },
+  {
+    name: "침대프레임 · VALEN BED FRAME",
+    type: "출원번호 30-2024-0027140",
+    year: "2024",
+    location: "MZ 미니멀라이프",
+    img: "/images/products/bed-frame-banner.webp",
+    alt: "베로티 침대프레임 VALEN BED FRAME MZ 미니멀라이프 무헤드 매트 받침대",
+    desc: "가치중심 소비 MZ세대를 위한 미니멀라이프 침대. 잦은 이사에도 걱정 없는 튼튼한 내구성과 간편 조립",
+    href: "/products/bed-frame/",
+  },
+]
+
+// 골프타석의자 시리즈
+const golfSeries = [
+  {
+    name: "Golf Pod Basic",
+    type: "출원번호 30-2025-0031589",
+    year: "2025",
+    location: "소파형 타석의자",
+    img: "/images/products/golf-pod-basic-banner.webp",
+    alt: "베로티 골프타석의자 Golf Pod Basic 소파형 1인용 커뮤니티 골프연습장",
+    desc: "품격 있는 골프연습과 공간의 美를 추구하는 안락한 1인용 타석의자. 다수 사용자를 위한 관리 편의성과 튼튼한 내구성",
+    href: "/products/golf-pod/",
+  },
+  {
+    name: "Golf Pod Trendy",
+    type: "출원번호 30-2025-0031589",
+    year: "2025",
+    location: "스마트 타석의자",
+    img: "/images/products/golf-pod-trendy-banner.webp",
+    alt: "베로티 골프타석의자 Golf Pod Trendy 스마트 타석의자 커뮤니티",
+    desc: "최신 스마트 기능을 갖춘 프리미엄 골프 타석의자. 모던한 디자인과 첨단 기술의 완벽한 조화",
+    href: "/products/golf-pod/",
   },
 ]
 
 const thumbs = [
   {
-    name: "메이플자이 — 납품 현장",
-    type: "이동가구",
+    name: "메이플자이 — 완성 공간",
+    type: "이동가구·제작가구",
     year: "2025",
     location: "서울 반포",
-    img: "/images/performance/maple-xi-03.webp",
-    alt: "베로티 서울 반포 메이플자이 커뮤니티센터 이동가구 납품 현장",
+    img: "/images/performance/maple-xi-thumb-1.webp",
+    alt: "베로티 서울 반포 메이플자이 커뮤니티센터 완성 공간",
     href: "/portfolio/",
   },
   {
-    name: "메이플자이 — 커뮤니티 공간",
-    type: "이동가구",
+    name: "메이플자이 — 라운지",
+    type: "이동가구·타일",
     year: "2025",
     location: "서울 반포",
-    img: "/images/performance/maple-xi-05.webp",
-    alt: "베로티 서울 반포 메이플자이 커뮤니티 공간 이동가구 납품",
+    img: "/images/performance/maple-xi-thumb-2.webp",
+    alt: "베로티 서울 반포 메이플자이 라운지 공간",
     href: "/portfolio/",
   },
   {
@@ -78,17 +113,17 @@ const thumbs = [
     type: "이동가구·디스플레이",
     year: "2026",
     location: "서울 잠실",
-    img: "/images/performance/lotte-reel-03.webp",
-    alt: "베로티 서울 잠실 롯데르엘 커뮤니티센터 웰컴라운지 이동가구 디스플레이",
+    img: "/images/performance/lotte-reel-thumb-1.webp",
+    alt: "베로티 서울 잠실 롯데르엘 커뮤니티센터 웰컴라운지",
     href: "/portfolio/",
   },
   {
-    name: "롯데르엘 — 커뮤니티 공간",
-    type: "이동가구·제작가구",
+    name: "롯데르엘 — 조명 디스플레이",
+    type: "디스플레이·조명",
     year: "2026",
     location: "서울 잠실",
-    img: "/images/performance/lotte-reel-05.webp",
-    alt: "베로티 서울 잠실 롯데르엘 커뮤니티 공간 이동가구 제작가구",
+    img: "/images/performance/lotte-reel-thumb-2.webp",
+    alt: "베로티 서울 잠실 롯데르엘 조명 디스플레이",
     href: "/portfolio/",
   },
   {
@@ -96,8 +131,8 @@ const thumbs = [
     type: "이동가구",
     year: "2025",
     location: "광명 철산동",
-    img: "/images/performance/xi-heritage-03.webp",
-    alt: "베로티 광명 철산동 자이 더 헤리티지 커뮤니티센터 이동가구",
+    img: "/images/performance/xi-heritage-thumb-1.webp",
+    alt: "베로티 광명 철산동 자이 더 헤리티지 커뮤니티센터",
     href: "/portfolio/",
   },
   {
@@ -105,7 +140,7 @@ const thumbs = [
     type: "독자개발",
     year: "2024",
     location: "디자인등록 상품",
-    img: "/images/products/side-table-10.webp",
+    img: "/images/products/side-table-thumb.webp",
     alt: "베로티 협탁 VALEN SIDE TABLE 인테리어 연출 공간",
     href: "/products/side-table/",
   },
@@ -114,17 +149,17 @@ const thumbs = [
     type: "독자개발",
     year: "2024",
     location: "이동가구",
-    img: "/images/products/bed-frame-01.webp",
+    img: "/images/products/bed-frame-thumb.webp",
     alt: "베로티 침대프레임 VALEN BED FRAME MZ 미니멀라이프",
     href: "/products/bed-frame/",
   },
   {
-    name: "골프타석의자 · Golf Pod",
+    name: "골프타석의자 · Golf Pod Basic",
     type: "독자개발",
     year: "2025",
     location: "커뮤니티 골프연습장",
-    img: "/images/products/golf-pod-basic-brown-01.webp",
-    alt: "베로티 골프타석의자 Golf Pod Basic 브라운 커뮤니티 골프연습장",
+    img: "/images/products/golf-pod-thumb.webp",
+    alt: "베로티 골프타석의자 Golf Pod 커뮤니티 골프연습장",
     href: "/products/golf-pod/",
   },
 ]
@@ -203,48 +238,60 @@ export function GridPortfolio() {
         ))}
       </motion.div>
 
-      {/* Category Filter */}
+      {/* Category Filter - 디자인 요소만 (비활성) */}
       <div className="px-4 md:px-8 lg:px-16 py-3 flex flex-wrap gap-1.5 md:gap-2 border-b border-neutral-100 overflow-x-auto">
-        {categories.map((cat) => (
-          <button
+        {categories.map((cat, idx) => (
+          <div
             key={cat}
-            onClick={() => setActiveCategory(cat)}
-            className={`px-3 py-1 text-[9px] md:text-[10px] uppercase tracking-widest border transition-all duration-200 whitespace-nowrap ${
-              activeCategory === cat
+            className={`px-3 py-1 text-[9px] md:text-[10px] uppercase tracking-widest border whitespace-nowrap ${
+              idx === 0
                 ? "bg-neutral-900 border-neutral-900 text-white"
-                : "border-neutral-200 text-neutral-500 hover:border-neutral-500"
+                : "border-neutral-200 text-neutral-500"
             }`}
           >
             {cat}
-          </button>
+          </div>
         ))}
       </div>
 
       {/* === 슬로건 배너 === */}
       <section className="bg-[#2A2A2A] px-4 md:px-8 lg:px-16 py-8 md:py-12 border-b border-neutral-700">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 md:gap-8 items-center">
-          <div>
-            <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-stone-400 mb-2 md:mb-3">
-              VERO + QUALITY — 참된, 올바른 품질
-            </p>
-            <h1 className="font-serif text-2xl md:text-4xl lg:text-5xl text-white leading-tight mb-3 md:mb-4">
-              디자인 감각을 갖춘<br />
-              <span className="text-yellow-400">중국전문가 그룹</span>
-            </h1>
-            <p className="text-stone-300 text-xs md:text-sm leading-relaxed">
-              북경대 디자인석사 출신 전문가들이 중국 현지공장 직매입으로<br className="hidden md:block" />
-              하이엔드 커뮤니티의 새로운 기준을 제시합니다.
-            </p>
+        <div className="max-w-6xl mx-auto">
+          {/* 상단: VEROTY 좌측 크게 + 우측 디자인 감각 */}
+          <div className="grid md:grid-cols-[2fr,3fr] gap-6 md:gap-12 items-center mb-8 md:mb-12">
+            {/* 좌측: VEROTY 로고 크게 */}
+            <div>
+              <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-white font-bold tracking-tight">
+                VEROTY
+              </h1>
+              <p className="text-[10px] md:text-xs uppercase tracking-wider text-stone-400 mt-2 md:mt-3">
+                VERO + QUALITY — 참된, 올바른 품질
+              </p>
+            </div>
+
+            {/* 우측: 디자인 감각을 갖춘 중국전문가 그룹 */}
+            <div>
+              <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl text-white leading-tight mb-3 md:mb-4">
+                디자인 감각을 갖춘<br />
+                <span className="text-yellow-400">중국전문가 그룹</span>
+              </h2>
+              <p className="text-stone-300 text-xs md:text-sm leading-relaxed">
+                북경대 디자인석사 출신 전문가들이 중국 현지공장 직매입으로<br className="hidden md:block" />
+                하이엔드 커뮤니티의 새로운 기준을 제시합니다.
+              </p>
+            </div>
           </div>
-          <div className="grid grid-cols-3 gap-2 md:gap-4 text-center">
+
+          {/* 하단: ①②③ 3가지 핵심 가치 */}
+          <div className="grid grid-cols-3 gap-3 md:gap-6">
             {[
               { icon: "①", title: "직접생산·직매입", desc: "중간마진 최소화" },
               { icon: "②", title: "원가검증", desc: "Q.C.D 검증조직" },
               { icon: "③", title: "최적운송", desc: "4개 거점 항구" },
             ].map((item) => (
-              <div key={item.title} className="border border-neutral-600 p-3 md:p-4 rounded">
-                <p className="text-yellow-400 text-base md:text-lg mb-1">{item.icon}</p>
-                <p className="text-white text-[10px] md:text-xs font-bold mb-1">{item.title}</p>
+              <div key={item.title} className="border border-neutral-600 p-4 md:p-5 rounded text-center">
+                <p className="text-yellow-400 text-xl md:text-2xl mb-2">{item.icon}</p>
+                <p className="text-white text-xs md:text-sm font-bold mb-1">{item.title}</p>
                 <p className="text-stone-400 text-[9px] md:text-[10px]">{item.desc}</p>
               </div>
             ))}
@@ -252,108 +299,121 @@ export function GridPortfolio() {
         </div>
       </section>
 
-      {/* Featured Banner Projects */}
-      {featured.map((p, i) => (
-        <motion.div
-          key={p.name}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: i * 0.1 }}
-          className="group border-b border-neutral-100 cursor-pointer"
-        >
-          <Link href={p.href} className="flex flex-col md:flex-row">
-            {/* 텍스트 영역 */}
-            <div className="bg-[#1C1C1C] flex flex-col justify-center px-8 md:px-12 lg:px-16 py-10 md:py-16 md:w-2/5 shrink-0">
-              <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-white/50 mb-3">
-                {p.year} · {p.type} · {p.location}
-              </p>
-              <h2 className="font-serif text-xl md:text-2xl lg:text-3xl text-white mb-3 leading-snug">{p.name}</h2>
-              <p className="text-white/60 text-xs md:text-sm leading-relaxed">{p.desc}</p>
-              <span className="inline-block mt-6 text-[10px] uppercase tracking-widest text-yellow-400/80 border border-yellow-400/30 px-3 py-1.5 self-start">
-                자세히 보기 →
-              </span>
-            </div>
-            {/* 이미지 영역 */}
-            <div className="relative overflow-hidden bg-neutral-100 md:flex-1" style={{minHeight: "320px"}}>
+      {/* === Golf Pod 시리즈 === */}
+      <section className="bg-neutral-50 border-b border-neutral-200">
+        <div className="px-4 md:px-8 lg:px-16 py-6 md:py-8">
+          <div className="mb-4 md:mb-6">
+            <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-neutral-400 mb-1">Series 01</p>
+            <h2 className="font-serif text-xl md:text-2xl text-neutral-800">Golf Pod 시리즈</h2>
+            <p className="text-xs md:text-sm text-neutral-500 mt-1 md:mt-2">
+              커뮤니티 골프연습장 전용 설계 · 특허 출원 상품 · 소파형 & 스마트형
+            </p>
+          </div>
+        </div>
+
+        {golfSeries.map((p, i) => (
+          <motion.div
+            key={p.name}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: i * 0.1 }}
+            className="group relative w-full overflow-hidden border-b border-neutral-100 cursor-pointer"
+            style={{ aspectRatio: "21/8" }}
+          >
+            <Link href={p.href} className="block w-full h-full">
               {p.img ? (
                 <img
                   src={p.img}
                   alt={p.alt}
-                  className="w-full h-full object-cover object-center group-hover:scale-[1.03] transition-transform duration-1000 absolute inset-0"
+                  className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-1000"
                   loading={i === 0 ? "eager" : "lazy"}
                   fetchPriority={i === 0 ? "high" : "auto"}
-                  width={900}
-                  height={600}
+                  width={1400}
+                  height={533}
                 />
               ) : (
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-full h-full bg-neutral-200 flex items-center justify-center">
                   <p className="text-neutral-400 text-sm">이미지 준비 중</p>
                 </div>
               )}
-            </div>
-          </Link>
-        </motion.div>
-      ))}
-
-      {/* === 추가 독자개발 제품 2종 === */}
-      <section className="px-4 md:px-8 lg:px-16 py-6 md:py-8 border-b border-neutral-100">
-        <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-neutral-400 mb-4 md:mb-6">
-          독자개발 특허청 디자인등록 상품
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-          {[
-            {
-              name: "침대프레임 · VALEN BED FRAME",
-              type: "2024.10 출시 / 이동가구",
-              img: "/images/products/bed-frame-04.webp",
-              alt: "베로티 침대프레임 VALEN BED FRAME MZ 미니멀라이프 무헤드 인테리어",
-              spec: "PB 16T (E0) / LPM · S / SS / Q 사이즈",
-              desc: "가치중심 소비 MZ세대를 위한 미니멀라이프 침대. 간편 조립으로 잦은 이사에도 걱정 없음.",
-              patent: "출원번호 30-2024-0027140",
-              href: "/products/bed-frame/",
-            },
-            {
-              name: "골프타석의자 · Golf Pod Basic",
-              type: "2025.10 출시 / 이동가구",
-              img: "/images/products/golf-pod-basic-brown-01.webp",
-              alt: "베로티 골프타석의자 Golf Pod Basic 소파형 1인용 커뮤니티 골프연습장",
-              spec: "인조가죽·스틸 · W1200×H1400×D600 · 진그레이/연그레이/브라운",
-              desc: "품격 있는 골프연습과 공간의 美를 추구하는 안락한 1인용 타석의자.",
-              patent: "출원번호 30-2025-0031589",
-              href: "/products/golf-pod/",
-            },
-          ].map((p) => (
-            <Link key={p.name} href={p.href}>
-              <div className="group cursor-pointer border border-neutral-100 hover:border-neutral-300 transition-colors">
-                <div className="aspect-square overflow-hidden bg-neutral-50">
-                  {p.img ? (
-                    <img
-                      src={p.img}
-                      alt={p.alt}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
-                      loading="lazy"
-                      width={600}
-                      height={600}
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-neutral-100">
-                      <p className="text-neutral-400 text-sm">이미지 준비 중</p>
-                    </div>
-                  )}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8 lg:p-12 flex items-end justify-between">
+                <div>
+                  <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-white/60 mb-1 md:mb-2">
+                    {p.year} · {p.type} · {p.location}
+                  </p>
+                  <h3 className="font-serif text-lg md:text-2xl lg:text-4xl text-white">{p.name}</h3>
+                  <p className="text-white/70 text-xs md:text-sm mt-1 md:mt-2 max-w-lg hidden sm:block">{p.desc}</p>
                 </div>
-                <div className="p-4 md:p-5">
-                  <p className="text-[9px] uppercase tracking-widest text-neutral-400 mb-1">{p.type}</p>
-                  <h3 className="font-serif text-base md:text-lg text-neutral-800 mb-1 md:mb-2">{p.name}</h3>
-                  <p className="text-xs text-neutral-500 mb-2 leading-relaxed">{p.desc}</p>
-                  <p className="text-[9px] text-neutral-400">{p.spec}</p>
-                  <p className="text-[9px] text-yellow-600 mt-1 font-medium">{p.patent}</p>
+                <div className="hidden md:block text-right shrink-0 ml-4">
+                  <span className="text-[10px] uppercase tracking-widest text-white/40 border border-white/20 px-3 py-1.5">
+                    Golf Pod Series
+                  </span>
                 </div>
               </div>
             </Link>
-          ))}
-        </div>
+          </motion.div>
+        ))}
       </section>
+
+      {/* === VALEN 시리즈 === */}
+      <section className="bg-white border-b border-neutral-200">
+        <div className="px-4 md:px-8 lg:px-16 py-6 md:py-8">
+          <div className="mb-4 md:mb-6">
+            <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-neutral-400 mb-1">Series 02</p>
+            <h2 className="font-serif text-xl md:text-2xl text-neutral-800">VALEN 시리즈</h2>
+            <p className="text-xs md:text-sm text-neutral-500 mt-1 md:mt-2">
+              특허청 디자인등록 상품 · LPM 공법 · 가성비 프리미엄 라인
+            </p>
+          </div>
+        </div>
+
+        {valenSeries.map((p, i) => (
+          <motion.div
+            key={p.name}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: i * 0.1 }}
+            className="group relative w-full overflow-hidden border-b border-neutral-100 cursor-pointer"
+            style={{ aspectRatio: "21/8" }}
+          >
+            <Link href={p.href} className="block w-full h-full">
+              {p.img ? (
+                <img
+                  src={p.img}
+                  alt={p.alt}
+                  className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-1000"
+                  loading="lazy"
+                  width={1400}
+                  height={533}
+                />
+              ) : (
+                <div className="w-full h-full bg-neutral-200 flex items-center justify-center">
+                  <p className="text-neutral-400 text-sm">이미지 준비 중</p>
+                </div>
+              )}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8 lg:p-12 flex items-end justify-between">
+                <div>
+                  <p className="text-[9px] md:text-[10px] uppercase tracking-widest text-white/60 mb-1 md:mb-2">
+                    {p.year} · {p.type} · {p.location}
+                  </p>
+                  <h3 className="font-serif text-lg md:text-2xl lg:text-4xl text-white">{p.name}</h3>
+                  <p className="text-white/70 text-xs md:text-sm mt-1 md:mt-2 max-w-lg hidden sm:block">{p.desc}</p>
+                </div>
+                <div className="hidden md:block text-right shrink-0 ml-4">
+                  <span className="text-[10px] uppercase tracking-widest text-white/40 border border-white/20 px-3 py-1.5">
+                    VALEN Series
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+        ))}
+      </section>
+
 
       {/* === Performance 납품현장 섹션 === */}
       <section className="px-4 md:px-8 lg:px-16 py-8 md:py-10 bg-neutral-50 border-b border-neutral-100">
@@ -370,34 +430,37 @@ export function GridPortfolio() {
               site: "서울 잠실 롯데르엘",
               scope: "이동가구, 제작가구, 디스플레이, 조명",
               year: "2026.01",
-              img: "/images/performance/lotte-reel-02.webp",
-              alt: "베로티 서울 잠실 롯데르엘 커뮤니티센터 이동가구 납품 현장",
+              img: "/images/performance/lotte-reel-main.webp",
+              alt: "베로티 서울 잠실 롯데르엘 커뮤니티센터 라운지 완성 공간",
+              href: "/portfolio/#lotte-reel",
             },
             {
               site: "서울 반포 메이플자이",
               scope: "이동가구, 제작가구, 타일",
               year: "2025.08",
-              img: "/images/performance/maple-xi-02.webp",
-              alt: "베로티 서울 반포 메이플자이 커뮤니티센터 납품 현장",
+              img: "/images/performance/maple-xi-main.webp",
+              alt: "베로티 서울 반포 메이플자이 커뮤니티센터 완성 공간",
+              href: "/portfolio/#maple-xi",
             },
             {
-              site: "광명 자이 더 헤리티지",
+              site: "광명 철산 자이 더 헤리티지",
               scope: "이동가구",
               year: "2025.05",
-              img: "/images/performance/xi-heritage-02.webp",
-              alt: "베로티 광명 철산동 자이 더 헤리티지 커뮤니티센터 납품 현장",
+              img: "/images/performance/xi-heritage-main.webp",
+              alt: "베로티 광명 철산동 자이 더 헤리티지 커뮤니티센터 완성 공간",
+              href: "/portfolio/#xi-heritage",
             },
           ].map((p) => (
-            <Link key={p.site} href="/portfolio/">
+            <Link key={p.site} href={p.href}>
               <div className="group cursor-pointer">
-                <div className="aspect-[4/3] overflow-hidden mb-2 md:mb-3 bg-neutral-200">
+                <div className="aspect-[16/9] overflow-hidden mb-2 md:mb-3 bg-neutral-100">
                   <img
                     src={p.img}
                     alt={p.alt}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                     loading="lazy"
                     width={600}
-                    height={450}
+                    height={338}
                   />
                 </div>
                 <p className="text-[8px] md:text-[9px] uppercase tracking-widest text-neutral-400 mb-0.5">{p.year}</p>
@@ -427,15 +490,15 @@ export function GridPortfolio() {
               className="group cursor-pointer"
             >
               <Link href={p.href}>
-                <div className="aspect-[4/3] overflow-hidden mb-2 md:mb-3 bg-neutral-100">
+                <div className="aspect-[16/9] overflow-hidden mb-2 md:mb-3 bg-neutral-100">
                   {p.img ? (
                     <img
                       src={p.img}
                       alt={p.alt}
-                      className={`w-full h-full group-hover:scale-105 transition-transform duration-700 ${p.type === "독자개발" ? "object-contain" : "object-cover"}`}
+                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
                       loading="lazy"
                       width={600}
-                      height={450}
+                      height={338}
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-neutral-100">

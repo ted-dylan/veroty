@@ -75,15 +75,14 @@ export default function SideTablePage() {
       </nav>
 
       {/* Hero — 대표 이미지 */}
-      <div className="w-full bg-neutral-50 flex justify-center" style={{height: "min(600px, 60vw)"}}>
+      <div className="aspect-[21/9] overflow-hidden bg-neutral-100">
         <img
           src="/images/products/side-table-01.webp"
           alt="베로티 협탁 VALEN SIDE TABLE LPM 라운딩 공법 디자인등록 대표 이미지"
-          className="h-full w-full object-contain"
+          className="w-full h-full object-cover"
           loading="eager"
-          fetchPriority="high"
-          width={1000}
-          height={1000}
+          width={1400}
+          height={600}
         />
       </div>
 
@@ -121,14 +120,14 @@ export default function SideTablePage() {
         <p className="text-[10px] uppercase tracking-widest text-neutral-400 mb-6">Gallery</p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {images.slice(1).map((img) => (
-            <div key={img.src} className="aspect-square overflow-hidden bg-neutral-50">
+            <div key={img.src} className="aspect-[4/3] overflow-hidden bg-neutral-100">
               <img
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-full object-contain hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 loading="lazy"
                 width={600}
-                height={600}
+                height={450}
               />
             </div>
           ))}

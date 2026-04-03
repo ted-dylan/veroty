@@ -1,8 +1,12 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import localFont from "next/font/local"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const pretendard = localFont({
+  src: "../public/fonts/PretendardVariable.ttf",
+  display: "swap",
+  variable: "--font-pretendard",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://veroty.co.kr"),
@@ -79,7 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={pretendard.className}>{children}</body>
     </html>
   )
 }

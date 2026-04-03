@@ -103,7 +103,12 @@ export default function PortfolioPage() {
 
       {/* 프로젝트별 섹션 */}
       {projects.map((project, pi) => (
-        <section key={project.site} className={`px-4 md:px-8 lg:px-16 py-12 border-b border-neutral-100 ${pi % 2 === 1 ? "bg-neutral-50" : ""}`}>
+        <section
+          key={project.site}
+          id={project.site === "서울 잠실 롯데르엘" ? "lotte-reel" : project.site === "서울 반포 메이플자이" ? "maple-xi" : "xi-heritage"}
+          className={`px-4 md:px-8 lg:px-16 py-12 border-b border-neutral-100 ${pi % 2 === 1 ? "bg-neutral-50" : ""}`}
+          style={{ scrollMarginTop: "80px" }}
+        >
           <div className="mb-6">
             <p className="text-[10px] uppercase tracking-widest text-neutral-400 mb-1">{project.year}</p>
             <h2 className="font-serif text-2xl text-neutral-800 mb-1">{project.site}</h2>

@@ -33,135 +33,26 @@ const stats = [
 
 // VALEN 시리즈
 const valenSeries = [
-  {
-    name: "협탁 · VALEN SIDE TABLE",
-    type: "디자인등록 30-1305034호",
-    year: "2024",
-    location: "LPM 라운드 공법",
-    img: "/images/products/side-table-banner.webp",
-    alt: "베로티 협탁 VALEN SIDE TABLE LPM 라운딩 공법 디자인등록 상품 인테리어 연출",
-    desc: "각진 모서리 없는 동글동글 디자인. 고가 공법을 LPM 소재로 합리적으로 구현한 Value Engineering 성공사례",
-    href: "/products/side-table/",
-  },
-  {
-    name: "책장 · MY BOOKSHELF",
-    type: "디자인등록 30-1305033호",
-    year: "2024",
-    location: "LPM 래핑 공법",
-    img: "/images/products/bookshelf-banner.webp",
-    alt: "베로티 책장 MY BOOKSHELF LPM 래핑 공법 Knock Down 디자인등록 상품",
-    desc: "볼트 하나로 완성되는 Knock Down 방식. 필요한 공간에 필요한 사이즈로 어디든 설치 가능한 유닛형 책장",
-    href: "/products/bookshelf/",
-  },
-  {
-    name: "침대프레임 · VALEN BED FRAME",
-    type: "출원번호 30-2024-0027140",
-    year: "2024",
-    location: "MZ 미니멀라이프",
-    img: "/images/products/bed-frame-banner.webp",
-    alt: "베로티 침대프레임 VALEN BED FRAME MZ 미니멀라이프 무헤드 매트 받침대",
-    desc: "가치중심 소비 MZ세대를 위한 미니멀라이프 침대. 잦은 이사에도 걱정 없는 튼튼한 내구성과 간편 조립",
-    href: "/products/bed-frame/",
-  },
+  { name: "협탁 · VALEN SIDE TABLE", slot: 3, type: "디자인등록 30-1305034호", year: "2024", location: "LPM 라운드 공법", img: "", alt: "", desc: "각진 모서리 없는 동글동글 디자인. 고가 공법을 LPM 소재로 합리적으로 구현한 Value Engineering 성공사례", href: "/products/side-table/" },
+  { name: "책장 · MY BOOKSHELF", slot: 4, type: "디자인등록 30-1305033호", year: "2024", location: "LPM 래핑 공법", img: "", alt: "", desc: "볼트 하나로 완성되는 Knock Down 방식. 필요한 공간에 필요한 사이즈로 어디든 설치 가능한 유닛형 책장", href: "/products/bookshelf/" },
+  { name: "침대프레임 · VALEN BED FRAME", slot: 5, type: "출원번호 30-2024-0027140", year: "2024", location: "MZ 미니멀라이프", img: "", alt: "", desc: "가치중심 소비 MZ세대를 위한 미니멀라이프 침대. 잦은 이사에도 걱정 없는 튼튼한 내구성과 간편 조립", href: "/products/bed-frame/" },
 ]
 
 // 골프타석의자 시리즈
 const golfSeries = [
-  {
-    name: "Golf Pod Basic",
-    type: "출원번호 30-2025-0031589",
-    year: "2025",
-    location: "소파형 타석의자",
-    img: "/images/products/golf-pod-basic-banner.webp",
-    alt: "베로티 골프타석의자 Golf Pod Basic 소파형 1인용 커뮤니티 골프연습장",
-    desc: "품격 있는 골프연습과 공간의 美를 추구하는 안락한 1인용 타석의자. 다수 사용자를 위한 관리 편의성과 튼튼한 내구성",
-    href: "/products/golf-pod/",
-  },
-  {
-    name: "Golf Pod Trendy",
-    type: "출원번호 30-2025-0031589",
-    year: "2025",
-    location: "스마트 타석의자",
-    img: "/images/products/golf-pod-trendy-banner.webp",
-    alt: "베로티 골프타석의자 Golf Pod Trendy 스마트 타석의자 커뮤니티",
-    desc: "최신 스마트 기능을 갖춘 프리미엄 골프 타석의자. 모던한 디자인과 첨단 기술의 완벽한 조화",
-    href: "/products/golf-pod/",
-  },
+  { name: "Golf Pod Basic", slot: 1, type: "출원번호 30-2025-0031589", year: "2025", location: "소파형 타석의자", img: "", alt: "", desc: "품격 있는 골프연습과 공간의 美를 추구하는 안락한 1인용 타석의자. 다수 사용자를 위한 관리 편의성과 튼튼한 내구성", href: "/products/golf-pod/" },
+  { name: "Golf Pod Trendy", slot: 2, type: "출원번호 30-2025-0031589", year: "2025", location: "스마트 타석의자", img: "", alt: "", desc: "최신 스마트 기능을 갖춘 프리미엄 골프 타석의자. 모던한 디자인과 첨단 기술의 완벽한 조화", href: "/products/golf-pod/" },
 ]
 
 const thumbs = [
-  {
-    name: "메이플자이 — 완성 공간",
-    type: "이동가구·제작가구",
-    year: "2025",
-    location: "서울 반포",
-    img: "/images/performance/maple-xi-thumb-1.webp",
-    alt: "베로티 서울 반포 메이플자이 커뮤니티센터 완성 공간",
-    href: "/portfolio/",
-  },
-  {
-    name: "메이플자이 — 라운지",
-    type: "이동가구·타일",
-    year: "2025",
-    location: "서울 반포",
-    img: "/images/performance/maple-xi-thumb-2.webp",
-    alt: "베로티 서울 반포 메이플자이 라운지 공간",
-    href: "/portfolio/",
-  },
-  {
-    name: "롯데르엘 — 웰컴라운지",
-    type: "이동가구·디스플레이",
-    year: "2026",
-    location: "서울 잠실",
-    img: "/images/performance/lotte-reel-thumb-1.webp",
-    alt: "베로티 서울 잠실 롯데르엘 커뮤니티센터 웰컴라운지",
-    href: "/portfolio/",
-  },
-  {
-    name: "롯데르엘 — 조명 디스플레이",
-    type: "디스플레이·조명",
-    year: "2026",
-    location: "서울 잠실",
-    img: "/images/performance/lotte-reel-thumb-2.webp",
-    alt: "베로티 서울 잠실 롯데르엘 조명 디스플레이",
-    href: "/portfolio/",
-  },
-  {
-    name: "자이 더 헤리티지",
-    type: "이동가구",
-    year: "2025",
-    location: "광명 철산동",
-    img: "/images/performance/xi-heritage-thumb-1.webp",
-    alt: "베로티 광명 철산동 자이 더 헤리티지 커뮤니티센터",
-    href: "/portfolio/",
-  },
-  {
-    name: "협탁 · VALEN SIDE TABLE",
-    type: "독자개발",
-    year: "2024",
-    location: "디자인등록 상품",
-    img: "/images/products/side-table-thumb.webp",
-    alt: "베로티 협탁 VALEN SIDE TABLE 인테리어 연출 공간",
-    href: "/products/side-table/",
-  },
-  {
-    name: "침대프레임 · VALEN BED FRAME",
-    type: "독자개발",
-    year: "2024",
-    location: "이동가구",
-    img: "/images/products/bed-frame-thumb.webp",
-    alt: "베로티 침대프레임 VALEN BED FRAME MZ 미니멀라이프",
-    href: "/products/bed-frame/",
-  },
-  {
-    name: "골프타석의자 · Golf Pod Basic",
-    type: "독자개발",
-    year: "2025",
-    location: "커뮤니티 골프연습장",
-    img: "/images/products/golf-pod-thumb.webp",
-    alt: "베로티 골프타석의자 Golf Pod 커뮤니티 골프연습장",
-    href: "/products/golf-pod/",
-  },
+  { name: "메이플자이 — 완성 공간", slot: 9, type: "이동가구·제작가구", year: "2025", location: "서울 반포", img: "", alt: "", href: "/portfolio/" },
+  { name: "메이플자이 — 라운지", slot: 10, type: "이동가구·타일", year: "2025", location: "서울 반포", img: "", alt: "", href: "/portfolio/" },
+  { name: "롯데르엘 — 웰컴라운지", slot: 11, type: "이동가구·디스플레이", year: "2026", location: "서울 잠실", img: "", alt: "", href: "/portfolio/" },
+  { name: "롯데르엘 — 조명 디스플레이", slot: 12, type: "디스플레이·조명", year: "2026", location: "서울 잠실", img: "", alt: "", href: "/portfolio/" },
+  { name: "자이 더 헤리티지", slot: 13, type: "이동가구", year: "2025", location: "광명 철산동", img: "", alt: "", href: "/portfolio/" },
+  { name: "협탁 · VALEN SIDE TABLE", slot: 14, type: "독자개발", year: "2024", location: "디자인등록 상품", img: "", alt: "", href: "/products/side-table/" },
+  { name: "침대프레임 · VALEN BED FRAME", slot: 15, type: "독자개발", year: "2024", location: "이동가구", img: "", alt: "", href: "/products/bed-frame/" },
+  { name: "골프타석의자 · Golf Pod Basic", slot: 16, type: "독자개발", year: "2025", location: "커뮤니티 골프연습장", img: "", alt: "", href: "/products/golf-pod/" },
 ]
 
 export function GridPortfolio() {
@@ -322,21 +213,9 @@ export function GridPortfolio() {
             style={{ aspectRatio: "21/8" }}
           >
             <Link href={p.href} className="block w-full h-full">
-              {p.img ? (
-                <img
-                  src={p.img}
-                  alt={p.alt}
-                  className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-1000"
-                  loading={i === 0 ? "eager" : "lazy"}
-                  fetchPriority={i === 0 ? "high" : "auto"}
-                  width={1400}
-                  height={533}
-                />
-              ) : (
-                <div className="w-full h-full bg-neutral-200 flex items-center justify-center">
-                  <p className="text-neutral-400 text-sm">이미지 준비 중</p>
-                </div>
-              )}
+              <div className="w-full h-full bg-neutral-800 flex items-center justify-center">
+                <p className="text-white text-4xl font-bold opacity-40">{p.slot}</p>
+              </div>
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8 lg:p-12 flex items-end justify-between">
                 <div>
@@ -426,42 +305,14 @@ export function GridPortfolio() {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
           {[
-            {
-              site: "서울 잠실 롯데르엘",
-              scope: "이동가구, 제작가구, 디스플레이, 조명",
-              year: "2026.01",
-              img: "/images/performance/lotte-reel-main.webp",
-              alt: "베로티 서울 잠실 롯데르엘 커뮤니티센터 라운지 완성 공간",
-              href: "/portfolio/#lotte-reel",
-            },
-            {
-              site: "서울 반포 메이플자이",
-              scope: "이동가구, 제작가구, 타일",
-              year: "2025.08",
-              img: "/images/performance/maple-xi-main.webp",
-              alt: "베로티 서울 반포 메이플자이 커뮤니티센터 완성 공간",
-              href: "/portfolio/#maple-xi",
-            },
-            {
-              site: "광명 철산 자이 더 헤리티지",
-              scope: "이동가구",
-              year: "2025.05",
-              img: "/images/performance/xi-heritage-main.webp",
-              alt: "베로티 광명 철산동 자이 더 헤리티지 커뮤니티센터 완성 공간",
-              href: "/portfolio/#xi-heritage",
-            },
+            { site: "서울 잠실 롯데르엘", slot: 6, scope: "이동가구, 제작가구, 디스플레이, 조명", year: "2026.01", href: "/portfolio/#lotte-reel" },
+            { site: "서울 반포 메이플자이", slot: 7, scope: "이동가구, 제작가구, 타일", year: "2025.08", href: "/portfolio/#maple-xi" },
+            { site: "광명 철산 자이 더 헤리티지", slot: 8, scope: "이동가구", year: "2025.05", href: "/portfolio/#xi-heritage" },
           ].map((p) => (
             <Link key={p.site} href={p.href}>
               <div className="group cursor-pointer">
-                <div className="aspect-[16/9] overflow-hidden mb-2 md:mb-3 bg-neutral-100">
-                  <img
-                    src={p.img}
-                    alt={p.alt}
-                    className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
-                    width={600}
-                    height={338}
-                  />
+                <div className="aspect-[16/9] overflow-hidden mb-2 md:mb-3 bg-neutral-200 flex items-center justify-center">
+                  <p className="text-neutral-500 text-3xl font-bold">{p.slot}</p>
                 </div>
                 <p className="text-[8px] md:text-[9px] uppercase tracking-widest text-neutral-400 mb-0.5">{p.year}</p>
                 <p className="font-serif text-sm text-neutral-800">{p.site}</p>
@@ -490,21 +341,8 @@ export function GridPortfolio() {
               className="group cursor-pointer"
             >
               <Link href={p.href}>
-                <div className="aspect-[16/9] overflow-hidden mb-2 md:mb-3 bg-neutral-100">
-                  {p.img ? (
-                    <img
-                      src={p.img}
-                      alt={p.alt}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
-                      loading="lazy"
-                      width={600}
-                      height={338}
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-neutral-100">
-                      <p className="text-neutral-400 text-xs">준비 중</p>
-                    </div>
-                  )}
+                <div className="aspect-[16/9] overflow-hidden mb-2 md:mb-3 bg-neutral-200 flex items-center justify-center">
+                  <p className="text-neutral-500 text-3xl font-bold">{p.slot}</p>
                 </div>
                 <p className="text-[8px] md:text-[9px] uppercase tracking-widest text-neutral-400 mb-0.5">
                   {p.year} · {p.type}

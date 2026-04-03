@@ -60,16 +60,8 @@ export default function GolfPodPage() {
       </nav>
 
       {/* Hero */}
-      <div className="aspect-[21/9] overflow-hidden bg-neutral-100">
-        <img
-          src="/images/products/golf-pod-basic-banner.webp"
-          alt="베로티 골프타석의자 Golf Pod Basic 커뮤니티 골프연습장 전용 타석의자 대표 이미지"
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchPriority="high"
-          width={1400}
-          height={600}
-        />
+      <div className="aspect-[21/9] overflow-hidden bg-neutral-800 flex items-center justify-center">
+        <p className="text-white text-6xl font-bold opacity-40">47</p>
       </div>
 
       {/* 제품 정보 */}
@@ -91,8 +83,7 @@ export default function GolfPodPage() {
               {
                 type: "Golf Pod Basic",
                 tag: "소파형",
-                img: "/images/products/golf-pod-basic-brown-01.webp",
-                alt: "베로티 골프타석의자 Golf Pod Basic 브라운 소파형",
+                slot: 48,
                 desc: "클래식하고 안정적인 소파 스타일. 넉넉한 좌석감과 높은 등받이로 장시간 연습에도 편안함을 제공합니다.",
                 spec: "W1200 × H1400 × D600mm",
                 color: "진그레이 / 연그레이 / 브라운",
@@ -101,8 +92,7 @@ export default function GolfPodPage() {
               {
                 type: "Golf Pod Trendy",
                 tag: "스마트형",
-                img: "/images/products/golf-pod-trendy-01.webp",
-                alt: "베로티 골프타석의자 Golf Pod Trendy 스마트형",
+                slot: 49,
                 desc: "현대적이고 세련된 디자인. 공간을 더욱 모던하게 연출하고 싶은 프리미엄 커뮤니티에 적합합니다.",
                 spec: "별도 문의",
                 color: "커스텀 컬러 가능",
@@ -110,8 +100,8 @@ export default function GolfPodPage() {
               },
             ].map((item) => (
               <div key={item.type} className="border border-neutral-200 p-6">
-                <div className="aspect-[4/3] bg-neutral-100 mb-4 overflow-hidden">
-                  <img src={item.img} alt={item.alt} className="w-full h-full object-cover" loading="lazy" width={600} height={450} />
+                <div className="aspect-[4/3] bg-neutral-200 mb-4 overflow-hidden flex items-center justify-center">
+                  <p className="text-neutral-500 text-4xl font-bold">{item.slot}</p>
                 </div>
                 <p className="text-[9px] uppercase tracking-widest text-yellow-600 mb-1">{item.tag}</p>
                 <h2 className="font-serif text-lg text-neutral-800 mb-2">{item.type}</h2>

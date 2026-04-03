@@ -29,16 +29,7 @@ const breadcrumbSchema = {
   ],
 }
 
-const images = [
-  { src: "/images/products/bed-frame-01.webp", alt: "베로티 침대프레임 VALEN BED FRAME 대표 이미지" },
-  { src: "/images/products/bed-frame-02.webp", alt: "베로티 침대프레임 측면 뷰" },
-  { src: "/images/products/bed-frame-03.webp", alt: "베로티 침대프레임 디테일" },
-  { src: "/images/products/bed-frame-04.webp", alt: "베로티 침대프레임 인테리어 연출 1" },
-  { src: "/images/products/bed-frame-05.webp", alt: "베로티 침대프레임 인테리어 연출 2" },
-  { src: "/images/products/bed-frame-06.webp", alt: "베로티 침대프레임 조립 구조" },
-  { src: "/images/products/bed-frame-07.webp", alt: "베로티 침대프레임 공간 연출 1" },
-  { src: "/images/products/bed-frame-08.webp", alt: "베로티 침대프레임 공간 연출 2" },
-]
+const slots = [39, 40, 41, 42, 43, 44, 45, 46]
 
 export default function BedFramePage() {
   return (
@@ -72,15 +63,8 @@ export default function BedFramePage() {
       </nav>
 
       {/* Hero */}
-      <div className="aspect-[21/9] overflow-hidden bg-neutral-100">
-        <img
-          src="/images/products/bed-frame-01.webp"
-          alt="베로티 침대프레임 VALEN BED FRAME MZ 미니멀라이프 무헤드 대표 이미지"
-          className="w-full h-full object-cover"
-          loading="eager"
-          width={1400}
-          height={600}
-        />
+      <div className="aspect-[21/9] overflow-hidden bg-neutral-800 flex items-center justify-center">
+        <p className="text-white text-6xl font-bold opacity-40">{slots[0]}</p>
       </div>
 
       {/* 제품 정보 */}
@@ -121,16 +105,9 @@ export default function BedFramePage() {
       <section className="px-8 lg:px-16 py-10 border-b border-neutral-100">
         <p className="text-[10px] uppercase tracking-widest text-neutral-400 mb-6">Gallery</p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {images.slice(1).map((img) => (
-            <div key={img.src} className="aspect-[4/3] overflow-hidden bg-neutral-100">
-              <img
-                src={img.src}
-                alt={img.alt}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                loading="lazy"
-                width={600}
-                height={450}
-              />
+          {slots.slice(1).map((n) => (
+            <div key={n} className="aspect-[4/3] overflow-hidden bg-neutral-200 flex items-center justify-center">
+              <p className="text-neutral-500 text-3xl font-bold">{n}</p>
             </div>
           ))}
         </div>

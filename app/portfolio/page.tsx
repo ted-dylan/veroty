@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { ScrollToHash } from "./ScrollToHash"
 
 export const metadata: Metadata = {
   title: "납품 현장 포트폴리오 | 베로티 VEROTY — 롯데르엘·메이플자이·자이 더 헤리티지",
@@ -8,62 +9,40 @@ export const metadata: Metadata = {
   alternates: { canonical: "https://veroty.co.kr/portfolio/" },
 }
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "홈", item: "https://veroty.co.kr/" },
-    { "@type": "ListItem", position: 2, name: "납품 현장 포트폴리오", item: "https://veroty.co.kr/portfolio/" },
-  ],
-}
-
 const projects = [
   {
+    id: "lotte-reel",
     site: "서울 잠실 롯데르엘",
     year: "2026.01",
     scope: "이동가구 · 제작가구 · 디스플레이 · 조명",
     desc: "서울 잠실 랜드마크 단지의 커뮤니티센터 전반에 걸쳐 이동가구, 제작가구, 공간연출 디스플레이, 조명까지 원스톱으로 납품·시공하였습니다.",
-    images: [
-      { src: "/images/performance/lotte-reel-01.webp", alt: "베로티 잠실 롯데르엘 커뮤니티센터 납품 현장 1" },
-      { src: "/images/performance/lotte-reel-02.webp", alt: "베로티 잠실 롯데르엘 커뮤니티센터 납품 현장 2" },
-      { src: "/images/performance/lotte-reel-03.webp", alt: "베로티 잠실 롯데르엘 웰컴라운지" },
-      { src: "/images/performance/lotte-reel-04.webp", alt: "베로티 잠실 롯데르엘 공간 연출" },
-      { src: "/images/performance/lotte-reel-05.webp", alt: "베로티 잠실 롯데르엘 이동가구" },
-      { src: "/images/performance/lotte-reel-06.webp", alt: "베로티 잠실 롯데르엘 디스플레이 조명" },
-    ],
+    mainSlot: 52,
+    subSlots: [53, 54, 55, 56, 57],
   },
   {
+    id: "maple-xi",
     site: "서울 반포 메이플자이",
     year: "2025.08",
     scope: "이동가구 · 제작가구 · 타일",
     desc: "반포 메이플자이 커뮤니티센터에 이동가구 전 품목과 맞춤 제작가구, 중국 직매입 고급 타일을 납품하였습니다. 웰컴라운지부터 골프연습장까지 일관된 공간 디자인을 구현하였습니다.",
-    images: [
-      { src: "/images/performance/maple-xi-01.webp", alt: "베로티 반포 메이플자이 커뮤니티센터 납품 현장 1" },
-      { src: "/images/performance/maple-xi-02.webp", alt: "베로티 반포 메이플자이 커뮤니티센터 납품 현장 2" },
-      { src: "/images/performance/maple-xi-03.webp", alt: "베로티 반포 메이플자이 웰컴라운지" },
-      { src: "/images/performance/maple-xi-04.webp", alt: "베로티 반포 메이플자이 골프연습장" },
-      { src: "/images/performance/maple-xi-05.webp", alt: "베로티 반포 메이플자이 타일 시공" },
-      { src: "/images/performance/maple-xi-06.webp", alt: "베로티 반포 메이플자이 제작가구" },
-    ],
+    mainSlot: 58,
+    subSlots: [59, 60, 61, 62, 63],
   },
   {
+    id: "xi-heritage",
     site: "광명 철산동 자이 더 헤리티지",
     year: "2025.05",
     scope: "이동가구",
     desc: "광명 자이 더 헤리티지 커뮤니티센터에 이동가구를 납품하였습니다. 하이엔드 단지의 격에 맞는 프리미엄 품질과 합리적인 가격으로 납품을 완료하였습니다.",
-    images: [
-      { src: "/images/performance/xi-heritage-01.webp", alt: "베로티 광명 자이 더 헤리티지 커뮤니티센터 납품 현장 1" },
-      { src: "/images/performance/xi-heritage-02.webp", alt: "베로티 광명 자이 더 헤리티지 커뮤니티센터 납품 현장 2" },
-      { src: "/images/performance/xi-heritage-03.webp", alt: "베로티 광명 자이 더 헤리티지 이동가구 1" },
-      { src: "/images/performance/xi-heritage-04.webp", alt: "베로티 광명 자이 더 헤리티지 이동가구 2" },
-    ],
+    mainSlot: 64,
+    subSlots: [65, 66, 67],
   },
 ]
 
 export default function PortfolioPage() {
   return (
     <div className="w-full bg-white overflow-hidden">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <ScrollToHash />
 
       {/* Header */}
       <header className="bg-[#1C1C1C] px-4 md:px-8 lg:px-16 py-4 flex items-center justify-between">
@@ -104,8 +83,8 @@ export default function PortfolioPage() {
       {/* 프로젝트별 섹션 */}
       {projects.map((project, pi) => (
         <section
-          key={project.site}
-          id={project.site === "서울 잠실 롯데르엘" ? "lotte-reel" : project.site === "서울 반포 메이플자이" ? "maple-xi" : "xi-heritage"}
+          key={project.id}
+          id={project.id}
           className={`px-4 md:px-8 lg:px-16 py-12 border-b border-neutral-100 ${pi % 2 === 1 ? "bg-neutral-50" : ""}`}
           style={{ scrollMarginTop: "80px" }}
         >
@@ -116,30 +95,16 @@ export default function PortfolioPage() {
             <p className="text-sm text-neutral-500 leading-relaxed max-w-2xl">{project.desc}</p>
           </div>
 
-          {/* 대표 이미지 (첫 번째 — 와이드) */}
-          <div className="aspect-[16/7] overflow-hidden bg-neutral-200 mb-4">
-            <img
-              src={project.images[0].src}
-              alt={project.images[0].alt}
-              className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-1000"
-              loading={pi === 0 ? "eager" : "lazy"}
-              width={1400}
-              height={612}
-            />
+          {/* 대표 이미지 (와이드) */}
+          <div className="aspect-[16/7] overflow-hidden bg-neutral-200 mb-4 flex items-center justify-center">
+            <p className="text-neutral-500 text-5xl font-bold">{project.mainSlot}</p>
           </div>
 
           {/* 서브 이미지 그리드 */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-            {project.images.slice(1).map((img) => (
-              <div key={img.src} className="aspect-[4/3] overflow-hidden bg-neutral-100">
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                  loading="lazy"
-                  width={600}
-                  height={450}
-                />
+            {project.subSlots.map((n) => (
+              <div key={n} className="aspect-[4/3] overflow-hidden bg-neutral-200 flex items-center justify-center">
+                <p className="text-neutral-500 text-3xl font-bold">{n}</p>
               </div>
             ))}
           </div>

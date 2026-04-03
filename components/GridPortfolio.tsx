@@ -210,7 +210,7 @@ export function GridPortfolio() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: i * 0.1 }}
             className="group relative w-full overflow-hidden border-b border-neutral-100 cursor-pointer"
-            style={{ aspectRatio: "21/8" }}
+            style={{ aspectRatio: "21/6" }}
           >
             <Link href={p.href} className="block w-full h-full">
               <img
@@ -261,7 +261,7 @@ export function GridPortfolio() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: i * 0.1 }}
             className="group relative w-full overflow-hidden border-b border-neutral-100 cursor-pointer"
-            style={{ aspectRatio: "21/8" }}
+            style={{ aspectRatio: "21/6" }}
           >
             <Link href={p.href} className="block w-full h-full">
               <img

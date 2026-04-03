@@ -210,16 +210,16 @@ export function GridPortfolio() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: i * 0.1 }}
             className="group relative w-full overflow-hidden border-b border-neutral-100 cursor-pointer"
-            style={{ aspectRatio: "16/9" }}
+            style={{ aspectRatio: "21/8" }}
           >
             <Link href={p.href} className="block w-full h-full">
               <img
                 src={p.img}
                 alt={p.alt}
-                className="w-full h-full object-contain group-hover:scale-[1.03] transition-transform duration-1000"
+                className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-1000"
                 loading="lazy"
                 width={1400}
-                height={788}
+                height={533}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8 lg:p-12 flex items-end justify-between">
@@ -261,16 +261,16 @@ export function GridPortfolio() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: i * 0.1 }}
             className="group relative w-full overflow-hidden border-b border-neutral-100 cursor-pointer"
-            style={{ aspectRatio: "16/9" }}
+            style={{ aspectRatio: "21/8" }}
           >
             <Link href={p.href} className="block w-full h-full">
               <img
                 src={p.img}
                 alt={p.alt}
-                className="w-full h-full object-contain group-hover:scale-[1.03] transition-transform duration-1000"
+                className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-1000"
                 loading="lazy"
                 width={1400}
-                height={788}
+                height={533}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4 md:p-8 lg:p-12 flex items-end justify-between">
@@ -340,8 +340,8 @@ export function GridPortfolio() {
               className="group cursor-pointer"
             >
               <Link href={p.href}>
-                <div className="aspect-[4/3] overflow-hidden mb-2 md:mb-3">
-                  <img src={p.img} alt={p.alt} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" loading="lazy" width={400} height={300} />
+                <div className="aspect-[16/9] overflow-hidden mb-2 md:mb-3">
+                  <img src={p.img} alt={p.alt} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" width={400} height={225} />
                 </div>
                 <p className="text-[8px] md:text-[9px] uppercase tracking-widest text-neutral-400 mb-0.5">
                   {p.year} · {p.type}

@@ -123,8 +123,8 @@ const thumbs = [
     type: "독자개발",
     year: "2025",
     location: "커뮤니티 골프연습장",
-    img: "",
-    alt: "베로티 골프타석의자 Golf Pod 커뮤니티 골프연습장",
+    img: "/images/products/golf-pod-basic-brown-01.webp",
+    alt: "베로티 골프타석의자 Golf Pod Basic 브라운 커뮤니티 골프연습장",
     href: "/products/golf-pod/",
   },
 ]
@@ -316,7 +316,7 @@ export function GridPortfolio() {
             {
               name: "골프타석의자 · Golf Pod Basic",
               type: "2025.10 출시 / 이동가구",
-              img: "",
+              img: "/images/products/golf-pod-basic-brown-01.webp",
               alt: "베로티 골프타석의자 Golf Pod Basic 소파형 1인용 커뮤니티 골프연습장",
               spec: "인조가죽·스틸 · W1200×H1400×D600 · 진그레이/연그레이/브라운",
               desc: "품격 있는 골프연습과 공간의 美를 추구하는 안락한 1인용 타석의자.",

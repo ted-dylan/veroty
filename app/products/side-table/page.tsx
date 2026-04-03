@@ -29,7 +29,9 @@ const breadcrumbSchema = {
   ],
 }
 
-const slots = [17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+const slotImages = [17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27].map(
+  (n) => ({ src: `/images/slots/slot-${String(n).padStart(2, "0")}.webp`, alt: `베로티 협탁 VALEN SIDE TABLE 이미지 ${n}` })
+)
 
 export default function SideTablePage() {
   return (
@@ -63,8 +65,15 @@ export default function SideTablePage() {
       </nav>
 
       {/* Hero — 대표 이미지 */}
-      <div className="aspect-[21/9] overflow-hidden bg-neutral-800 flex items-center justify-center">
-        <p className="text-white text-6xl font-bold opacity-40">{slots[0]}</p>
+      <div className="aspect-[21/9] overflow-hidden bg-neutral-100">
+        <img
+          src={slotImages[0].src}
+          alt="베로티 협탁 VALEN SIDE TABLE LPM 라운딩 공법 디자인등록 대표 이미지"
+          className="w-full h-full object-cover"
+          loading="eager"
+          width={1400}
+          height={600}
+        />
       </div>
 
       {/* 제품 정보 */}
@@ -100,9 +109,16 @@ export default function SideTablePage() {
       <section className="px-8 lg:px-16 py-10 border-b border-neutral-100">
         <p className="text-[10px] uppercase tracking-widest text-neutral-400 mb-6">Gallery</p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {slots.slice(1).map((n) => (
-            <div key={n} className="aspect-[4/3] overflow-hidden bg-neutral-200 flex items-center justify-center">
-              <p className="text-neutral-500 text-3xl font-bold">{n}</p>
+          {slotImages.slice(1).map((img) => (
+            <div key={img.src} className="aspect-[4/3] overflow-hidden bg-neutral-100">
+              <img
+                src={img.src}
+                alt={img.alt}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+                width={600}
+                height={450}
+              />
             </div>
           ))}
         </div>

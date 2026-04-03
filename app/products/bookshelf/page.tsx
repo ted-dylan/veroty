@@ -34,19 +34,19 @@ const sizeVariants = [
     size: "300",
     label: "300 유닛형",
     desc: "가장 작은 유닛 사이즈. 좁은 공간이나 포인트 책장으로 적합. 2단 회전 배치 가능.",
-    slots: [29, 30],
+    images: [29, 30].map((n) => ({ src: `/images/slots/slot-${String(n).padStart(2, "0")}.webp`, alt: `베로티 책장 MY BOOKSHELF 300 유닛형 이미지 ${n}` })),
   },
   {
     size: "1200",
     label: "1200 표준형",
     desc: "가장 많이 사용되는 표준 사이즈. 커뮤니티 도서관, 독서실, 로비 공간에 최적.",
-    slots: [31, 32, 33, 34, 35, 36],
+    images: [31, 32, 33, 34, 35, 36].map((n) => ({ src: `/images/slots/slot-${String(n).padStart(2, "0")}.webp`, alt: `베로티 책장 MY BOOKSHELF 1200 표준형 이미지 ${n}` })),
   },
   {
     size: "1800",
     label: "1800 대형",
     desc: "넓은 벽면을 활용하는 대형 사이즈. 임팩트 있는 공간 연출에 적합.",
-    slots: [37, 38],
+    images: [37, 38].map((n) => ({ src: `/images/slots/slot-${String(n).padStart(2, "0")}.webp`, alt: `베로티 책장 MY BOOKSHELF 1800 대형 이미지 ${n}` })),
   },
 ]
 
@@ -82,8 +82,15 @@ export default function BookshelfPage() {
       </nav>
 
       {/* Hero */}
-      <div className="aspect-[21/9] overflow-hidden bg-neutral-800 flex items-center justify-center">
-        <p className="text-white text-6xl font-bold opacity-40">28</p>
+      <div className="aspect-[21/9] overflow-hidden bg-neutral-100">
+        <img
+          src="/images/slots/slot-28.webp"
+          alt="베로티 책장 MY BOOKSHELF LPM 래핑 Knock Down 디자인등록 대표 이미지"
+          className="w-full h-full object-cover"
+          loading="eager"
+          width={1400}
+          height={600}
+        />
       </div>
 
       {/* 제품 정보 */}
@@ -128,9 +135,16 @@ export default function BookshelfPage() {
             <p className="text-sm text-neutral-400">{variant.desc}</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {variant.slots.map((n) => (
-              <div key={n} className="aspect-[4/3] overflow-hidden bg-neutral-200 flex items-center justify-center">
-                <p className="text-neutral-500 text-3xl font-bold">{n}</p>
+            {variant.images.map((img) => (
+              <div key={img.src} className="aspect-[4/3] overflow-hidden bg-neutral-100">
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                  loading="lazy"
+                  width={600}
+                  height={450}
+                />
               </div>
             ))}
           </div>

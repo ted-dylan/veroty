@@ -60,8 +60,16 @@ export default function GolfPodPage() {
       </nav>
 
       {/* Hero */}
-      <div className="aspect-[21/9] overflow-hidden bg-neutral-800 flex items-center justify-center">
-        <p className="text-white text-6xl font-bold opacity-40">47</p>
+      <div className="aspect-[21/9] overflow-hidden bg-neutral-100">
+        <img
+          src="/images/slots/slot-47.webp"
+          alt="베로티 골프타석의자 Golf Pod 커뮤니티 골프연습장 전용 타석의자 대표 이미지"
+          className="w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
+          width={1400}
+          height={600}
+        />
       </div>
 
       {/* 제품 정보 */}
@@ -77,22 +85,44 @@ export default function GolfPodPage() {
             다수 사용자를 위한 관리 편의성과 튼튼한 내구성을 갖추었으며, Basic(소파형)과 Trendy(스마트형) 두 가지 타입으로 공간 컨셉에 맞게 선택할 수 있습니다.
           </p>
 
-          {/* 두 가지 타입 */}
+          {/* 네 가지 타입 */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {[
               {
+                type: "Golf Pod 덴디",
+                tag: "덴디형",
+                img: "",
+                alt: "베로티 골프타석의자 Golf Pod 덴디형",
+                desc: "단정하고 세련된 덴디 스타일. 클래식한 감성과 현대적 기능을 결합한 프리미엄 타석의자입니다.",
+                spec: "별도 문의",
+                color: "별도 문의",
+                patent: "출원번호 30-2025-0031589",
+              },
+              {
                 type: "Golf Pod Basic",
                 tag: "소파형",
-                slot: 48,
+                img: "",
+                alt: "베로티 골프타석의자 Golf Pod Basic 소파형",
                 desc: "클래식하고 안정적인 소파 스타일. 넉넉한 좌석감과 높은 등받이로 장시간 연습에도 편안함을 제공합니다.",
                 spec: "W1200 × H1400 × D600mm",
                 color: "진그레이 / 연그레이 / 브라운",
                 patent: "출원번호 30-2025-0031589",
               },
               {
+                type: "Golf Pod 테이블",
+                tag: "테이블형",
+                img: "",
+                alt: "베로티 골프타석의자 Golf Pod 테이블형",
+                desc: "수납 테이블이 일체화된 실용적인 타석의자. 음료, 스코어카드 등을 편리하게 관리할 수 있습니다.",
+                spec: "별도 문의",
+                color: "별도 문의",
+                patent: "출원번호 30-2025-0031589",
+              },
+              {
                 type: "Golf Pod Trendy",
                 tag: "스마트형",
-                slot: 49,
+                img: "",
+                alt: "베로티 골프타석의자 Golf Pod Trendy 스마트형",
                 desc: "현대적이고 세련된 디자인. 공간을 더욱 모던하게 연출하고 싶은 프리미엄 커뮤니티에 적합합니다.",
                 spec: "별도 문의",
                 color: "커스텀 컬러 가능",
@@ -101,7 +131,11 @@ export default function GolfPodPage() {
             ].map((item) => (
               <div key={item.type} className="border border-neutral-200 p-6">
                 <div className="aspect-[4/3] bg-neutral-200 mb-4 overflow-hidden flex items-center justify-center">
-                  <p className="text-neutral-500 text-4xl font-bold">{item.slot}</p>
+                  {item.img ? (
+                    <img src={item.img} alt={item.alt} className="w-full h-full object-cover" loading="lazy" width={600} height={450} />
+                  ) : (
+                    <p className="text-neutral-400 text-xs">이미지 준비 중</p>
+                  )}
                 </div>
                 <p className="text-[9px] uppercase tracking-widest text-yellow-600 mb-1">{item.tag}</p>
                 <h2 className="font-serif text-lg text-neutral-800 mb-2">{item.type}</h2>
